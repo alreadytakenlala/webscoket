@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/mine/index"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "猜拳游戏",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#FFFFFF"
+  },
+  "tabBar": {
+    "borderStyle": "black",
+    "backgroundColor": "#FFFFFF",
+    "color": "#24292E",
+    "selectedColor": "#0366F1",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "iconPath": "static/img/tabbar/xiaoyuan_default.png",
+        "selectedIconPath": "static/img/tabbar/xiaoyuan_active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "iconPath": "static/img/tabbar/me_default.png",
+        "selectedIconPath": "static/img/tabbar/me_active.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "真灼智慧校园将定位您的位置"
+    }
+  },
+  "resizable": true,
+  "usingComponents": {
+    "iconfont": "/wxcomponents/iconfont/iconfont"
+  },
+  "sitemapLocation": "sitemap1.json"
+}
