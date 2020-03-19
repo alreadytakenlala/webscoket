@@ -754,7 +754,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -7082,7 +7082,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -7103,14 +7103,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -7186,7 +7186,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -7611,9 +7611,9 @@ module.exports = g;
 
 /***/ }),
 /* 4 */
-/*!************************************************!*\
-  !*** E:/project/run/webscoket-demo/pages.json ***!
-  \************************************************/
+/*!*************************************************!*\
+  !*** E:/project/study/webscoket/web/pages.json ***!
+  \*************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8518,9 +8518,9 @@ module.exports = {"_from":"@dcloudio/uni-stat@alpha","_id":"@dcloudio/uni-stat@2
 
 /***/ }),
 /* 7 */
-/*!*****************************************************************!*\
-  !*** E:/project/run/webscoket-demo/pages.json?{"type":"style"} ***!
-  \*****************************************************************/
+/*!******************************************************************!*\
+  !*** E:/project/study/webscoket/web/pages.json?{"type":"style"} ***!
+  \******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8529,9 +8529,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 8 */
-/*!****************************************************************!*\
-  !*** E:/project/run/webscoket-demo/pages.json?{"type":"stat"} ***!
-  \****************************************************************/
+/*!*****************************************************************!*\
+  !*** E:/project/study/webscoket/web/pages.json?{"type":"stat"} ***!
+  \*****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9332,9 +9332,9 @@ if (hadRuntime) {
 
 /***/ }),
 /* 15 */
-/*!****************************************************!*\
-  !*** E:/project/run/webscoket-demo/store/index.js ***!
-  \****************************************************/
+/*!*****************************************************!*\
+  !*** E:/project/study/webscoket/web/store/index.js ***!
+  \*****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10309,9 +10309,9 @@ var index_esm = {
 
 /***/ }),
 /* 17 */
-/*!******************************************************!*\
-  !*** E:/project/run/webscoket-demo/store/getters.js ***!
-  \******************************************************/
+/*!*******************************************************!*\
+  !*** E:/project/study/webscoket/web/store/getters.js ***!
+  \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10324,9 +10324,9 @@ getters;exports.default = _default;
 
 /***/ }),
 /* 18 */
-/*!***********************************************************!*\
-  !*** E:/project/run/webscoket-demo/store/modules/user.js ***!
-  \***********************************************************/
+/*!************************************************************!*\
+  !*** E:/project/study/webscoket/web/store/modules/user.js ***!
+  \************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10394,9 +10394,9 @@ user;exports.default = _default;
 
 /***/ }),
 /* 19 */
-/*!************************************************************!*\
-  !*** E:/project/run/webscoket-demo/store/mutationTypes.js ***!
-  \************************************************************/
+/*!*************************************************************!*\
+  !*** E:/project/study/webscoket/web/store/mutationTypes.js ***!
+  \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10411,9 +10411,9 @@ types;exports.default = _default;
 
 /***/ }),
 /* 20 */
-/*!***************************************************!*\
-  !*** E:/project/run/webscoket-demo/config/api.js ***!
-  \***************************************************/
+/*!****************************************************!*\
+  !*** E:/project/study/webscoket/web/config/api.js ***!
+  \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10469,9 +10469,9 @@ var baseUrl = "http://zkapi.zhaobas.com";var _default =
 
 /***/ }),
 /* 21 */
-/*!****************************************************!*\
-  !*** E:/project/run/webscoket-demo/config/http.js ***!
-  \****************************************************/
+/*!*****************************************************!*\
+  !*** E:/project/study/webscoket/web/config/http.js ***!
+  \*****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10618,9 +10618,9 @@ function _loadingDecoration(_ref2)
 
 /***/ }),
 /* 22 */
-/*!******************************************************!*\
-  !*** E:/project/run/webscoket-demo/utils/storage.js ***!
-  \******************************************************/
+/*!*******************************************************!*\
+  !*** E:/project/study/webscoket/web/utils/storage.js ***!
+  \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10731,9 +10731,9 @@ function getStorageInfo() {var isSync = arguments.length > 0 && arguments[0] !==
 
 /***/ }),
 /* 23 */
-/*!***************************************************!*\
-  !*** E:/project/run/webscoket-demo/utils/util.js ***!
-  \***************************************************/
+/*!****************************************************!*\
+  !*** E:/project/study/webscoket/web/utils/util.js ***!
+  \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10883,9 +10883,9 @@ function time(timestamp) {
 
 /***/ }),
 /* 24 */
-/*!*******************************************************!*\
-  !*** E:/project/run/webscoket-demo/config/package.js ***!
-  \*******************************************************/
+/*!********************************************************!*\
+  !*** E:/project/study/webscoket/web/config/package.js ***!
+  \********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11001,9 +11001,9 @@ function wxpay(wxJsApiParam) {
 
 /***/ }),
 /* 25 */
-/*!******************************************************!*\
-  !*** E:/project/run/webscoket-demo/config/router.js ***!
-  \******************************************************/
+/*!*******************************************************!*\
+  !*** E:/project/study/webscoket/web/config/router.js ***!
+  \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11020,9 +11020,9 @@ module.exports = {
 
 /***/ }),
 /* 26 */
-/*!****************************************************!*\
-  !*** E:/project/run/webscoket-demo/config/comm.js ***!
-  \****************************************************/
+/*!*****************************************************!*\
+  !*** E:/project/study/webscoket/web/config/comm.js ***!
+  \*****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11166,9 +11166,9 @@ function normalizeComponent (
 
 /***/ }),
 /* 30 */
-/*!******************************************************!*\
-  !*** E:/project/run/webscoket-demo/utils/Observe.js ***!
-  \******************************************************/
+/*!*******************************************************!*\
+  !*** E:/project/study/webscoket/web/utils/Observe.js ***!
+  \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11194,9 +11194,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 31 */
-/*!**********************************************************!*\
-  !*** E:/project/run/webscoket-demo/config/components.js ***!
-  \**********************************************************/
+/*!***********************************************************!*\
+  !*** E:/project/study/webscoket/web/config/components.js ***!
+  \***********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11205,9 +11205,9 @@ var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));function _i
 
 /***/ }),
 /* 32 */
-/*!******************************************************!*\
-  !*** E:/project/run/webscoket-demo/config/filter.js ***!
-  \******************************************************/
+/*!*******************************************************!*\
+  !*** E:/project/study/webscoket/web/config/filter.js ***!
+  \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
